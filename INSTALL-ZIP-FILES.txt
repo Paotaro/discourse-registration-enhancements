@@ -1,0 +1,13 @@
+about.json
+settings.yml
+common/common.scss
+locales/en.yml
+locales/zh_CN.yml
+javascripts/discourse/api-initializers/registration-enhancements.gjs
+javascripts/discourse/lib/registration-config.js
+javascripts/discourse/lib/registration-description.js
+javascripts/discourse/lib/registration-feedback.js
+javascripts/discourse/lib/registration-response.js
+test/javascripts/acceptance/registration-enhancements-test.js
+LICENSE
+THIRD-PARTY-NOTICES.md

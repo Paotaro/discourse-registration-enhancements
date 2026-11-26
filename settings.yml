@@ -1,0 +1,30 @@
+enable_branding: true
+brand_name: ""
+welcome_message: ""
+brand_subtitle: ""
+enable_sections: true
+account_section_title: ""
+questions_section_title: ""
+rules_section_title: ""
+fixed_field_titles: true
+show_field_descriptions: true
+enable_character_count: true
+enable_progressive_errors: true
+enable_rules: true
+rules_confirmation_field_id: 0
+rules_intro: ""
+rules_confirmation_text: ""
+rules_links:
+  type: objects
+  default: []
+  schema:
+    name: registration_rule_link
+    properties:
+      label:
+        type: string
+        required: true
+      url:
+        type: string
+        required: true
+enable_legacy_rule_descriptions: true
+enable_validation_plugin_integration: true

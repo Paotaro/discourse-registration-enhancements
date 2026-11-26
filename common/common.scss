@@ -1,0 +1,252 @@
+:is(.signup-fullpage, .invites-show):has(.dre-registration-field) {
+  .user-fields > .input-group:has(> .dre-registration-field) {
+    min-inline-size: 0;
+    margin-block-end: 1.15rem;
+  }
+
+  .dre-account-heading,
+  .dre-section-heading {
+    margin-block: 1.35rem 0.65rem;
+    padding-block-start: 0.75rem;
+    border-block-start: 1px solid var(--primary-low);
+    font-size: var(--font-up-1);
+    font-weight: 600;
+  }
+
+  .user-fields
+    > .input-group:has(.dre-question)
+    ~ .input-group
+    .dre-question
+    > .dre-section-heading,
+  .user-fields
+    > .input-group:has(.dre-confirm)
+    ~ .input-group
+    .dre-confirm
+    > .dre-section-heading {
+    display: none;
+  }
+
+  .dre-registration-field {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.4rem;
+    overflow-wrap: anywhere;
+
+    > .dre-section-heading {
+      order: -3;
+    }
+
+    > .dre-registration-description {
+      order: -1;
+    }
+
+    .user-field > .controls > .instructions {
+      display: none;
+    }
+
+    .user-field .controls .checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.55rem;
+      line-height: 1.5;
+
+      input[type="checkbox"].ember-checkbox {
+        flex: none;
+        margin: 0.22em 0 0;
+        margin-block-start: 0.22em;
+      }
+
+      > span {
+        min-inline-size: 0;
+        white-space: normal;
+      }
+    }
+
+    .user-field > .control-label {
+      display: block;
+      font-weight: 600;
+      margin-block-end: 0.4rem;
+    }
+  }
+
+  .user-fields .input-group .dre-text-entry {
+    > .user-field,
+    > .user-field > .controls {
+      display: contents;
+    }
+
+    .user-field:is(.text, .textarea)
+      .controls
+      > label.alt-placeholder.control-label {
+      position: static;
+      display: block;
+      order: -2;
+      margin: 0;
+      padding: 0;
+      inline-size: auto;
+      max-inline-size: none;
+      overflow: visible;
+      transform: none;
+      opacity: 1;
+      color: var(--primary);
+      font-size: var(--font-0);
+      font-weight: 600;
+      white-space: normal;
+      pointer-events: auto;
+      background: transparent;
+    }
+
+    textarea {
+      min-block-size: 120px;
+      resize: vertical;
+    }
+  }
+
+  .dre-registration-description {
+    line-height: 1.55;
+    color: var(--primary-high);
+
+    &:empty {
+      display: none;
+    }
+
+    a {
+      color: var(--tertiary);
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+    }
+  }
+
+  .dre-description-text {
+    white-space: pre-wrap;
+  }
+
+  .dre-registration-counter,
+  .dre-check p {
+    color: var(--primary-high);
+    font-size: var(--font-down-1);
+  }
+
+  .dre-registration-error {
+    color: var(--danger);
+
+    &:empty {
+      margin-block-start: -0.4rem;
+    }
+  }
+
+  .dre-registration-field:not(.dre-show-errors) .user-field .tip.bad,
+  .dre-has-error .user-field .tip.bad,
+  .dre-check,
+  .dre-registration-retry {
+    display: none;
+  }
+
+  .user-fields > .input-group:first-child .dre-registration-retry {
+    display: block;
+    color: var(--danger);
+  }
+
+  :is(form, .code-login-form__user-fields-step)
+    .input-group
+    :is(
+      input:not([type="checkbox"], [type="radio"], [type="hidden"]),
+      textarea
+    ) {
+    box-sizing: border-box;
+    min-inline-size: 0;
+    max-inline-size: 100%;
+    border-radius: 0.35rem;
+  }
+
+  :is(form, .code-login-form__user-fields-step)
+    :is(input, textarea, a, button):focus-visible,
+  :is(.signup-page-cta, .invitation-cta) :is(a, button):focus-visible {
+    outline: 2px solid var(--tertiary);
+    outline-offset: 2px;
+  }
+
+  :is(form, .code-login-form__user-fields-step) .input-group {
+    margin-block-end: 1rem;
+  }
+
+  :is(.signup-page-cta__buttons, .invitation-cta, .invitation-cta__info) {
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+}
+
+:is(.signup-fullpage, .invites-show):has(
+    :is(
+      .signup-page-cta__signup,
+      .invitation-cta__accept,
+      .code-login-form__verify,
+      .code-login-form__submit-approval
+    ):disabled
+  )
+  .user-fields
+  > .input-group:last-child
+  .dre-check {
+  display: block;
+  margin-block-start: 0.35rem;
+
+  p {
+    margin: 0.35rem 0 0;
+  }
+}
+
+:is(.signup-fullpage, .invites-show):has(.dre-registration-field)
+  .code-login-form__account-details-step
+  .input-group
+  :is(input:not([type="checkbox"], [type="radio"], [type="hidden"]), textarea) {
+  box-sizing: border-box;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  border-radius: 0.35rem;
+}
+
+.dre-brand {
+  margin-block: 0.75rem;
+  overflow-wrap: anywhere;
+  p {
+    margin-block: 0.2rem;
+    white-space: pre-wrap;
+  }
+
+  .dre-brand-name,
+  .dre-brand-welcome {
+    font-size: var(--font-up-1);
+    font-weight: 600;
+  }
+
+  .dre-brand-subtitle {
+    color: var(--primary-high);
+  }
+}
+
+:is(.signup-fullpage, .invites-show) .dre-registration-field {
+  &.dre-duplicate-title .user-field > .control-label {
+    display: none;
+  }
+
+  .dre-rule-links {
+    margin-block: 0.35rem;
+    padding-inline-start: 1.4em;
+    white-space: normal;
+  }
+
+  .dre-rule-links > li + li {
+    margin-block-start: 0.2rem;
+  }
+
+  .user-field .controls .checkbox-label {
+    align-items: flex-start;
+    margin-block: 0.2rem 0;
+  }
+}
+
+@media (max-width: 767px) {
+  :is(.signup-fullpage, .invites-show) .dre-brand-outlet {
+    padding-inline: 1rem;
+  }
+}
